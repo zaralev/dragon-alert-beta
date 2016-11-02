@@ -510,12 +510,20 @@ a:visited {
         letter-spacing: -0.038em;
     }
 
+    #week {
+        display: none;
+    }
+
     #month {
         display: none;
     }
 
     #year {
         display: none;
+    }
+
+    input {
+        visibility: hidden;
     }
 }
 /* PREVIEW TEST */
@@ -629,27 +637,28 @@ a:visited {
     background: #051d36;
     height: 100vh;
     font-size: 1.2em;
-    z-index:20000;
+    z-index: 20000;
     padding: 2em;
     color: #fff;
-    h1 {
-      color: $yellow;
-      font-family: $heading;
-      text-transform: uppercase;
-      font-size: 2em;
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
 
+    h1 {
+        color: $yellow;
+        font-family: $heading;
+        text-transform: uppercase;
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 }
+
 .creditsx {
-  position:fixed;
-  right: 30px;
-  top: 78px;
-  color: $yellow;
-  font-family: $heading;
-  font-size: 2.5em;
-  cursor: pointer;
+    position: fixed;
+    right: 30px;
+    top: 78px;
+    color: $yellow;
+    font-family: $heading;
+    font-size: 2.5em;
+    cursor: pointer;
 }
 
 #here {

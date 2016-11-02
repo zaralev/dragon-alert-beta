@@ -414,10 +414,14 @@ a:visited {
     color: rgba(0, 0, 0, 0.3);
     display: none;
     letter-spacing: -0.038em; }
+  #sort #week {
+    display: none; }
   #sort #month {
     display: none; }
   #sort #year {
     display: none; }
+  #sort input {
+    visibility: hidden; }
 
 /* PREVIEW TEST */
 #active {

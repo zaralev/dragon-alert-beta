@@ -30,22 +30,22 @@
 	<!-- PAGE CONTENT -->
 
 	<div id="mobile">
-		<div id="header"><img src="img/logo.png" onclick="showCredits()" style="cursor:pointer;"/></div>
+		<div id="header"><img src="img/logo.png" onclick="showCredits()" style="cursor:pointer;" /></div>
 
-			<div id="credits">
-				<div class="creditsx" onclick="getElementById('credits').style.display = 'none'">x</div>
-				<h1>Credits:</h1>
-				App design and development<br><br>- <a href="http://zara-leventhal.com" style="color:#FFC600;">Zara Leventhal</a>
-			</div>
+		<div id="credits">
+			<div class="creditsx" onclick="getElementById('credits').style.display = 'none'">x</div>
+			<h1>Credits:</h1> App design and development<br><br>- <a href="http://zara-leventhal.com" style="color:#FFC600;">Zara Leventhal</a>
+		</div>
 
 		<div id="map"><img src="img/map.png" /></div>
 		<div id="sort">
 			<span id="open">+</span>
 			<span id="close">--</span>
 			<ul>
-				<li id="year" onclick="expand()">Last Year</li>
-				<li id="month" onclick="expand()">Last Month</li>
-				<li id="week" onclick="expand()">Last Week</li>
+				<li id="current" onclick="expand()"><input type="radio" name="date" value="Last Week" checked> Last Week</li>
+				<li id="year" onclick="nowYear()"><input type="radio" name="date" value="Last Year" checked> Last Year</li>
+				<li id="month" onclick="nowMonth()"><input type="radio" name="date" value="Last Month" checked> Last Month</li>
+				<li id="week" onclick="nowWeek()"><input type="radio" name="date" value="Last Week" checked> Last Week</li>
 
 			</ul>
 
@@ -147,21 +147,69 @@
 			if (x == 0) {
 				document.getElementById("open").style.display = 'none';
 				document.getElementById("close").style.display = 'block';
+
+				document.getElementById("current").style.display = 'none';
 				document.getElementById("week").style.display = 'block';
 				document.getElementById("month").style.display = 'block';
 				document.getElementById("year").style.display = 'block';
 				document.getElementById("sort").style.bottom = '204px';
 				x += 1;
-			} else {
-				document.getElementById("open").style.display = 'block';
-				document.getElementById("close").style.display = 'none';
-				document.getElementById("week").style.display = 'block';
-				document.getElementById("month").style.display = 'none';
-				document.getElementById("year").style.display = 'none';
-				document.getElementById("sort").style.bottom = '68px';
-				x -= 1;
 			}
+			// else {
+			// 	document.getElementById("open").style.display = 'block';
+			// 	document.getElementById("close").style.display = 'none';
+			//
+			// 	// document.getElementById("current").style.display = 'block';
+			// 	// document.getElementById("week").style.display = 'none';
+			// 	// document.getElementById("month").style.display = 'none';
+			// 	// document.getElementById("year").style.display = 'none';
+			// 	document.getElementById("sort").style.bottom = '68px';
+			// 	x -= 1;
+			// }
 
+		}
+
+		function nowYear() {
+			document.getElementById("current").innerHTML = "<input type='radio' name='date' value='Last Year' checked> Last Year";
+
+			document.getElementById("current").style.display = 'block';
+			document.getElementById("week").style.display = 'none';
+			document.getElementById("month").style.display = 'none';
+			document.getElementById("year").style.display = 'none';
+
+			document.getElementById("open").style.display = 'block';
+			document.getElementById("close").style.display = 'none';
+			document.getElementById("sort").style.bottom = '68px';
+			x -= 1;
+		}
+
+		function nowMonth() {
+			document.getElementById("current").innerHTML = "<input type='radio' name='date' value='Last Month' checked> Last Month";
+
+			document.getElementById("current").style.display = 'block';
+			document.getElementById("week").style.display = 'none';
+			document.getElementById("month").style.display = 'none';
+			document.getElementById("year").style.display = 'none';
+
+			document.getElementById("open").style.display = 'block';
+			document.getElementById("close").style.display = 'none';
+			document.getElementById("sort").style.bottom = '68px';
+			x -= 1;
+		}
+
+
+		function nowWeek() {
+			document.getElementById("current").innerHTML = "<input type='radio' name='date' value='Last Week' checked> Last Week";
+
+			document.getElementById("current").style.display = 'block';
+			document.getElementById("week").style.display = 'none';
+			document.getElementById("month").style.display = 'none';
+			document.getElementById("year").style.display = 'none';
+
+			document.getElementById("open").style.display = 'block';
+			document.getElementById("close").style.display = 'none';
+			document.getElementById("sort").style.bottom = '68px';
+			x -= 1;
 		}
 	</script>
 	<script src="js-add2home.js"></script>

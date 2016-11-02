@@ -17,5 +17,13 @@
 
 
 function jmp2LocalPage(whichPage) {
-	location.href = whichPage;
+    location.href = whichPage;
 }
+
+// function changeDate() {
+// 	console.log("did it burp");
+//     document.getElementById("year").onclick = function() {
+//         document.getElementById("current").innerHTML = "<input type='radio' name='date' value='Last Year' checked> Last Year";
+// 				console.log("burp");
+//     }​
+// }
