@@ -66,8 +66,32 @@
 			</div>
 		</div>
 
-		<img src="img/inactive.png" class="inactive" id="inactive-one" />
-		<img src="img/inactive.png" class="inactive" id="inactive-two" />
+		<img onclick="inactiveClick1()" src="img/inactive.png" class="inactive" id="inactive-one" />
+		<div class="black" id="inactiveInfo1">
+			<div class="inactiveInfobox">
+				<div class="titlebox">Inactive Alert</div>
+				<div class="closex" onclick="getElementById('inactiveInfo1').style.display = 'none'">x</div>
+				<div class="desc">
+					<span class="date">Sunday, October 30th</span>
+					<span class="location">34th and Pearl</span>
+					<span class="description"><span class="type">Robbery</span> - Strong arm committed by three males, one wearing a white shirt. Fled north on 34th. No injuries. Police cleared the scene. </span>
+				</div>
+			</div>
+		</div>
+
+		<img onclick="inactiveClick2()" src="img/inactive.png" class="inactive" id="inactive-two" />
+		<div class="black" id="inactiveInfo2">
+			<div class="inactiveInfobox">
+				<div class="titlebox">Inactive Alert</div>
+				<div class="closex" onclick="getElementById('inactiveInfo2').style.display = 'none'">x</div>
+				<div class="desc">
+					<span class="date">Tuesday, November 1st</span>
+					<span class="location">35th and Brandywine</span>
+					<span class="description"><span class="type">Robbery</span> - Point of gun. No injuries. Police cleared the scene. </span>
+				</div>
+			</div>
+		</div>
+
 		<img src="img/here.png" id="here" />
 
 
@@ -125,7 +149,14 @@
 
 		function activeClick() {
 			document.getElementById("activeInfo").style.display = 'block';
-			console.log("ok");
+		}
+
+		function inactiveClick1() {
+			document.getElementById("inactiveInfo1").style.display = 'block';
+		}
+
+		function inactiveClick2() {
+			document.getElementById("inactiveInfo2").style.display = 'block';
 		}
 
 		function emergency() {
@@ -155,18 +186,6 @@
 				document.getElementById("sort").style.bottom = '204px';
 				x += 1;
 			}
-			// else {
-			// 	document.getElementById("open").style.display = 'block';
-			// 	document.getElementById("close").style.display = 'none';
-			//
-			// 	// document.getElementById("current").style.display = 'block';
-			// 	// document.getElementById("week").style.display = 'none';
-			// 	// document.getElementById("month").style.display = 'none';
-			// 	// document.getElementById("year").style.display = 'none';
-			// 	document.getElementById("sort").style.bottom = '68px';
-			// 	x -= 1;
-			// }
-
 		}
 
 		function nowYear() {

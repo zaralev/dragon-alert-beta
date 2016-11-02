@@ -511,6 +511,25 @@ a:visited {
   font-weight: bolder;
   font-size: 1.1em; }
 
+.inactiveInfobox {
+  position: relative;
+  top: 25vh;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  font-size: 1.1em; }
+  .inactiveInfobox::before {
+    background-image: url("img/inactive.png");
+    background-size: 35px 60px;
+    display: inline-block;
+    width: 35px;
+    height: 60px;
+    content: "";
+    position: absolute;
+    top: -8.5vh;
+    left: 45%; }
+
 #credits {
   display: none;
   position: fixed;
